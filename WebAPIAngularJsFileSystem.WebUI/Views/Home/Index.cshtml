@@ -1,0 +1,21 @@
+﻿@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="fileapp">
+<head>
+    <style>
+    </style>
+    <title ng-bind="title">AngJS File Browsing</title>
+
+    <script>
+    </script>
+    @Styles.Render("~/Content/css")
+</head>
+<body class="container">
+    <div ng-include="fileapp/navigate.html"></div>
+    <div ng-view></div>
+    
+</body>
+</html>
