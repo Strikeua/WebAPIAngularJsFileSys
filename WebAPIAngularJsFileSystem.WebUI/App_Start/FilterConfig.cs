@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace WebAPIAngularJsFileSystem.WebUI
+namespace WebAPIAngularJsFileSystem.WebAPI
 {
     public class FilterConfig
     {

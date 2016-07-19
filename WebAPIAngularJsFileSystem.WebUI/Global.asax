@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="WebAPIAngularJsFileSystem.WebUI.WebApiApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="WebAPIAngularJsFileSystem.WebAPI.WebApiApplication" Language="C#" %>

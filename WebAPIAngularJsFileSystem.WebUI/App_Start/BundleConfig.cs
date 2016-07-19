@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace WebAPIAngularJsFileSystem.WebUI
+namespace WebAPIAngularJsFileSystem.WebAPI
 {
     public class BundleConfig
     {
