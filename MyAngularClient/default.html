@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>My File System</title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/FileController.js"></script>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <table ng-controller="FilesController as file" >
+        <tr>
+            <th>Less 10Mb</th>
+            <th>10Mb-50Mb</th>
+            <th>More 100Mb</th>
+            <th>All</th>
+        </tr>
+        <tr>
+            <td>{{result.Count10Mb}}</td>
+            <td>{{result.Count10_50Mb}}</td>
+            <td>{{result.Count100Mb}}</td>
+            <td>Count of files: {{result.Files.length}}</td>
+        </tr>
+    </table>
+    
+    <div>
+        <h3>Current path: "F:\\Dropbox"</h3>
+    </div>
+
+    <div ng-controller="FilesController">
+        <h3>SubDirectories in Directory:</h3>
+        <div ng-repeat="item in result.Directories">
+            <a>{{item.Name}}</a>
+        </div>
+    </div>
+
+    <div ng-controller="FilesController">
+        <h3>Files in Directory:</h3>
+        <div ng-repeat="item in result.Files">
+            <a>{{item.Name}}   --   {{item.Size}}  bytes</a>
+        </div>
+    </div>
+
+    
+
+
+    
+    
+</body>
+</html>
