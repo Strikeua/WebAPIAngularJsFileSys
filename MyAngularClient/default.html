@@ -4,10 +4,11 @@
     <title>My File System</title>
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/FileController.js"></script>
+    <link rel="stylesheet" type="text/css" href="Content/mystyle.css" />
 	<meta charset="utf-8" />
 </head>
 <body>
-    <table ng-controller="FilesController as file" >
+    <table ng-controller="FilesController" >
         <tr>
             <th>Less 10Mb</th>
             <th>10Mb-50Mb</th>
@@ -22,28 +23,24 @@
         </tr>
     </table>
     
-    <div>
-        <h3>Current path: "F:\\Dropbox"</h3>
-    </div>
+    
 
     <div ng-controller="FilesController">
+        <h3>Current path: {{result.Path}}</h3>
+        <br />
         <h3>SubDirectories in Directory:</h3>
         <div ng-repeat="item in result.Directories">
-            <a>{{item.Name}}</a>
+            <a ng-click="GetNewData(item.Path)" href="#">{{item.Name}}</a>
         </div>
-    </div>
 
-    <div ng-controller="FilesController">
         <h3>Files in Directory:</h3>
         <div ng-repeat="item in result.Files">
-            <a>{{item.Name}}   --   {{item.Size}}  bytes</a>
+            <a ng-click="GetNewData(item.Path)" href="#">{{item.Name}} -- {{item.Size}}</a>
         </div>
     </div>
 
     
 
-
-    
     
 </body>
 </html>
